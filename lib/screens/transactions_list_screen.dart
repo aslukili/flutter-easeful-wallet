@@ -27,7 +27,7 @@ class _TransactionsListScreenState extends State<TransactionsListScreen> {
 
     if (response.statusCode == 200) {
       final List<dynamic> transactionsJson = json.decode(response.body);
-      final transactions =
+      final List<Transaction> transactions =
           transactionsJson.map((json) => Transaction.fromJson(json)).toList();
       return transactions;
     } else {
