@@ -29,7 +29,7 @@ class _TransactionsListScreenState extends State<TransactionsListScreen> {
       final List<dynamic> transactionsJson = json.decode(response.body);
       final List<Transaction> transactions =
           transactionsJson.map((json) => Transaction.fromJson(json)).toList();
-      return transactions;
+      return transactions.reversed.toList();
     } else {
       throw Exception('Failed to load transactions');
     }
