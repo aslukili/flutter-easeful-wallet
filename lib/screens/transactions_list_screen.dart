@@ -22,8 +22,8 @@ class _TransactionsListScreenState extends State<TransactionsListScreen> {
   }
 
   Future<List<Transaction>> _fetchTransactions() async {
-    final response = await http
-        .get(Uri.parse('http://165.232.123.254:8080/api/v1/transactions'));
+    final response = await http.get(Uri.parse(
+        'http://165.232.123.254:8080/api/v1/transactions/wallet?walletId=63fdda1bc213d514b8148884'));
 
     if (response.statusCode == 200) {
       final List<dynamic> transactionsJson = json.decode(response.body);
