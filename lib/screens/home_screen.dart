@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> _fetchWalletData() async {
     final response = await http.get(Uri.parse(
-        'http://165.232.123.254:8080/api/v1/wallets/63fdda1bc213d514b8148884'));
+        'http://165.232.123.254:8080/api/v1/wallets/6405b09cc213d514b814888a'));
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
